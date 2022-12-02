@@ -15,6 +15,7 @@ fn main() {
              })
              }.collect())
     .collect();
+    
     let ans1 : i64 = vec.iter().map(|x| {((x[1]-x[0]+4)%3)*3+x[1]}).sum();
     let ans2 : i64 = vec.iter().map(|x| {((x[0]+x[1])%3+1)+(x[1]-1)*3}).sum();
 
