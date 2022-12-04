@@ -8,8 +8,8 @@ fn main() {
                 .map(str::parse::<i64>)
                 .map(Result::unwrap)
                 .collect()
-            );
-            (iter.next().unwrap(),iter.next().unwrap())
+        );
+        (iter.next().unwrap(),iter.next().unwrap())
     })
     .collect();
     
