@@ -5,9 +5,11 @@ fn main() {
     .collect();
     
     let ans1 : i64 = vec.iter().sum();
-    let ans2 : i64 = vec.iter().sum();
 
     println!("The ans for part 1 is {}",ans1);
+    
+    let ans2 : i64 = vec.iter().sum();
+
     println!("The ans for part 2 is {}",ans2);
 }
 
