@@ -1,0 +1,7 @@
+elem = _{ int | list}
+
+list = {"[" ~ elem? ~ ("," ~ elem )* ~ "]"}
+
+int    =  @{ (ASCII_NONZERO_DIGIT ~ ASCII_DIGIT+ | ASCII_DIGIT) }
+
+WHITESPACE = _{ " " | "\n"}
