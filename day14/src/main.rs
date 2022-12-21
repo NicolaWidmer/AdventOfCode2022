@@ -52,7 +52,9 @@ fn main() {
     let lines:Vec<Vec<Point>> = include_str!("in.txt").split('\n')
     .map(|x| x.split(" -> ")
                .map(|y| {
-                    let mut it = y.split(',').map(str::parse::<usize>).map(Result::unwrap);
+                    let mut it = y.split(',')
+                    .map(str::parse::<usize>)
+                    .map(Result::unwrap);
                     (it.next().unwrap(),it.next().unwrap())
             
             }).collect()
@@ -69,7 +71,7 @@ fn main() {
             maxy=std::cmp::max(maxy,prev.1);
         }
     }
-    
+
     let perfil = filled.len();
 
     fill(&mut filled,true,maxy);
